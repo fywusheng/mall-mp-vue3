@@ -85,6 +85,16 @@ export default defineManifestConfig({
       urlCheck: false,
     },
     usingComponents: true,
+    permission: {
+      'scope.userLocation': {
+        desc: '以便为您提供更好的服务',
+      },
+    },
+    requiredPrivateInfos: ['getLocation'],
+    optimization: {
+      subPackages: true,
+    },
+    requiredBackgroundModes: ['audio'],
     // __usePrivacyCheck__: true,
   },
   'mp-alipay': {
